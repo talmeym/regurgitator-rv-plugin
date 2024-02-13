@@ -1,3 +1,6 @@
 *.iml
 .idea/
 target/
+/regurgitator-rv-plugin-json/dependency-reduced-pom.xml
+/regurgitator-rv-plugin-xml/dependency-reduced-pom.xml
+/regurgitator-rv-plugin-yml/dependency-reduced-pom.xml

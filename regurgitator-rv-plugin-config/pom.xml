@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>regurgitator-rv-plugin</artifactId>
+    <artifactId>regurgitator-rv-plugin-config</artifactId>
     <packaging>jar</packaging>
     <version>0.1.1</version>
 
@@ -23,9 +23,8 @@
     <dependencies>
         <dependency>
             <groupId>uk.emarte.regurgitator</groupId>
-            <artifactId>regurgitator-core</artifactId>
-            <version>0.1.3</version>
-            <scope>provided</scope>
+            <artifactId>regurgitator-rv-plugin</artifactId>
+            <version>0.1.1</version>
         </dependency>
     </dependencies>
 </project>

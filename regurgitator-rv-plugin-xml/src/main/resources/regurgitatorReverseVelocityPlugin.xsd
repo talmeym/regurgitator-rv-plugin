@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:rv="http://emarte.uk/reverse-velocity"
+           targetNamespace="http://emarte.uk/reverse-velocity" elementFormDefault="qualified">
+
+    <xs:simpleType name="populated-string">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="reverse-velocity">
+        <xs:attribute name="source" type="rv:populated-string" use="required"/>
+        <xs:attribute name="template" type="rv:populated-string" use="required"/>
+        <xs:attribute name="context" type="rv:populated-string"/>
+    </xs:complexType>
+
+    <xs:element name="reverse-velocity" type="rv:reverse-velocity"/>
+</xs:schema>
