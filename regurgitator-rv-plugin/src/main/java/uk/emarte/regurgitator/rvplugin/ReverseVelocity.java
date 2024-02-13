@@ -4,13 +4,7 @@
  */
 package uk.emarte.regurgitator.rvplugin;
 
-import uk.emarte.regurgitator.core.ContextLocation;
-import uk.emarte.regurgitator.core.Identifiable;
-import uk.emarte.regurgitator.core.Log;
-import uk.emarte.regurgitator.core.Message;
-import uk.emarte.regurgitator.core.RegurgitatorException;
-import uk.emarte.regurgitator.core.Step;
-import uk.emarte.regurgitator.core.ValueSource;
+import uk.emarte.regurgitator.core.*;
 import uk.emarte.reversevelocity.ParseException;
 import uk.emarte.reversevelocity.Parser;
 import uk.emarte.reversevelocity.ParserFactory;

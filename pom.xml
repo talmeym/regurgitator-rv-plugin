@@ -16,10 +16,12 @@
     <modules>
         <module>regurgitator-rv-plugin</module>
         <module>regurgitator-rv-plugin-config</module>
-        <module>regurgitator-rv-plugin-xml</module>
         <module>regurgitator-rv-plugin-json</module>
-        <module>regurgitator-rv-plugin-yml</module>
+        <module>regurgitator-rv-plugin-json-test</module>
+        <module>regurgitator-rv-plugin-xml</module>
         <module>regurgitator-rv-plugin-xml-test</module>
+        <module>regurgitator-rv-plugin-yml</module>
+        <module>regurgitator-rv-plugin-yml-test</module>
     </modules>
 
     <dependencies>

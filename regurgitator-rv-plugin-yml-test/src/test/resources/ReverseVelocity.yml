@@ -1,0 +1,5 @@
+reverse-velociity:
+  id: reverse-velocity
+  source: param-name
+  value: value
+  template: classpath:/template.xml

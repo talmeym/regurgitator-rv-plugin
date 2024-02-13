@@ -4,7 +4,9 @@
  */
 package uk.emarte.regurgitator.rvplugin;
 
-import uk.emarte.regurgitator.core.*;
+import uk.emarte.regurgitator.core.Log;
+import uk.emarte.regurgitator.core.RegurgitatorException;
+import uk.emarte.regurgitator.core.ValueSourceLoader;
 
 import java.io.File;
 import java.io.IOException;

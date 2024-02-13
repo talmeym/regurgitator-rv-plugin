@@ -1,0 +1,4 @@
+{
+  "kind": "reverse-velocity",
+  "template": "classpath:/template.xml"
+}

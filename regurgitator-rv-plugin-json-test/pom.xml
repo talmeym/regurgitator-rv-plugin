@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>regurgitator-rv-plugin-json-test</artifactId>
+    <version>0.1.1</version>
+
+    <parent>
+        <groupId>uk.emarte.regurgitator</groupId>
+        <artifactId>regurgitator-rv</artifactId>
+        <version>0.1.1</version>
+    </parent>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>regurgitator-mvn-repo</id>
+            <url>https://raw.github.com/talmeym/regurgitator-binaries/mvn-repo/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>uk.emarte.regurgitator</groupId>
+            <artifactId>regurgitator-test-common</artifactId>
+            <version>0.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>uk.emarte.regurgitator</groupId>
+            <artifactId>regurgitator-rv-plugin-json</artifactId>
+            <version>0.1.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>uk.emarte.regurgitator</groupId>
+                    <artifactId>regurgitator-rv-plugin</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>uk.emarte.regurgitator</groupId>
+            <artifactId>regurgitator-core-json-test</artifactId>
+            <version>0.1.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>uk.emarte.regurgitator</groupId>
+                    <artifactId>regurgitator-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+</project>

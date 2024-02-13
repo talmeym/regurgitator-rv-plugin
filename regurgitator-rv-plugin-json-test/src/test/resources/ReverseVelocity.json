@@ -1,0 +1,7 @@
+{
+  "kind": "reverse-velocity",
+  "id": "reverse-velocity",
+  "source": "param-name",
+  "value": "value",
+  "template": "classpath:/template.xml"
+}
