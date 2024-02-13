@@ -17,26 +17,11 @@ public class ReverseVelocityXmlLoaderTest extends XmlLoaderTest {
 
     @Test
     public void testValue() throws Exception {
-        assertExpectation("classpath:/AtIndexProcessor_value.xml", "");
-    }
-
-    @Test
-    public void testSource() throws Exception {
-        assertExpectation("classpath:/AtIndexProcessor_source.xml", "");
-    }
-
-    @Test
-    public void testSourceAndValue() throws Exception {
-        assertExpectation("classpath:/AtIndexProcessor_sourceAndValue.xml", "");
-    }
-
-    @Test
-    public void testFullLoad() throws Exception {
-        loadFile("classpath:/AtIndexProcessor_fullLoad.xml");
+        assertExpectation("classpath:/ReverseVelocity.xml", "uk.emarte.regurgitator.rvplugin.ReverseVelocity:['reverse-velocity','template.xml','<product><name>${product-name}</name></product>',uk.emarte.regurgitator.core.ValueSource:[uk.emarte.regurgitator.core.ContextLocation:['param-name'],'value']]");
     }
 
     @Test(expected = RegurgitatorException.class)
     public void testMissingSourceAndValue() throws Exception {
-        loadFile("classpath:/AtIndexProcessor_missingSourceAndValue.xml");
+        loadFile("classpath:/ReverseVelocity_missingSourceAndValue.xml");
     }
 }

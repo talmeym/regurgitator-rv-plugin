@@ -137,7 +137,7 @@
     <dependencies>
         <dependency>
             <groupId>uk.emarte.regurgitator</groupId>
-            <artifactId>regurgitator-rv-plugin</artifactId>
+            <artifactId>regurgitator-rv-plugin-config</artifactId>
             <version>0.1.1</version>
         </dependency>
 
