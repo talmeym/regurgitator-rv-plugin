@@ -30,19 +30,19 @@ public class ReverseVelocityJsonLoader implements JsonLoader<ReverseVelocity> {
     public ReverseVelocity load(JSONObject jsonObject, Set<Object> allIds) throws RegurgitatorException {
         String source = loadOptionalStr(jsonObject, SOURCE);
         String value = loadOptionalStr(jsonObject, VALUE);
-        String file = loadOptionalStr(jsonObject, TEMPLATE);
-        String template;
+        String template = loadOptionalStr(jsonObject, TEMPLATE);
+        String templateContent;
 
         try {
-            template = streamToString(getInputStreamForFile(file));
+            templateContent = streamToString(getInputStreamForFile(template));
         } catch (IOException e) {
-            throw new RegurgitatorException("Error loading template file: " + file, e);
+            throw new RegurgitatorException("Error loading template file: " + template, e);
         }
 
         ContextLocation location = source != null ? new ContextLocation(source) : null;
 
         String id = loadId(jsonObject, allIds);
         log.debug("Loaded reverse velocity '" + id + "'");
-        return new ReverseVelocity(id, new File(file).getName(), template, new ValueSource(location, value));
+        return new ReverseVelocity(id, new File(template).getName(), templateContent, new ValueSource(location, value));
     }
 }

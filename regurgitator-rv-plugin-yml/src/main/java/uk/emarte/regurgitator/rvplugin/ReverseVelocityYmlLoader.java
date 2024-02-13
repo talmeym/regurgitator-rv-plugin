@@ -30,19 +30,19 @@ public class ReverseVelocityYmlLoader implements YmlLoader<ReverseVelocity> {
     public ReverseVelocity load(Yaml yaml, Set<Object> allIds) throws RegurgitatorException {
         String source = loadOptionalStr(yaml, SOURCE);
         String value = loadOptionalStr(yaml, VALUE);
-        String file = loadOptionalStr(yaml, TEMPLATE);
-        String template;
+        String template = loadOptionalStr(yaml, TEMPLATE);
+        String templateContent;
 
         try {
-            template = streamToString(getInputStreamForFile(file));
+            templateContent = streamToString(getInputStreamForFile(template));
         } catch (IOException e) {
-            throw new RegurgitatorException("Error loading template file: " + file, e);
+            throw new RegurgitatorException("Error loading template file: " + template, e);
         }
 
         ContextLocation location = source != null ? new ContextLocation(source) : null;
 
         String id = loadId(yaml, allIds);
         log.debug("Loaded reverse velocity '" + id + "'");
-        return new ReverseVelocity(id, new File(file).getName(), template, new ValueSource(location, value));
+        return new ReverseVelocity(id, new File(templateContent).getName(), templateContent, new ValueSource(location, value));
     }
 }

@@ -11,7 +11,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Set;
 
-import static uk.emarte.regurgitator.core.CoreConfigConstants.*;
+import static uk.emarte.regurgitator.core.CoreConfigConstants.SOURCE;
+import static uk.emarte.regurgitator.core.CoreConfigConstants.VALUE;
 import static uk.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 import static uk.emarte.regurgitator.core.FileUtil.streamToString;
 import static uk.emarte.regurgitator.core.XmlConfigUtil.loadId;
@@ -25,7 +26,6 @@ public class ReverseVelocityXmlLoader implements XmlLoader<ReverseVelocity> {
     public ReverseVelocity load(Element element, Set<Object> allIds) throws RegurgitatorException {
         String source = loadOptionalStr(element, SOURCE);
         String value = loadOptionalStr(element, VALUE);
-        String file = loadOptionalStr(element, FILE);
         String template = loadOptionalStr(element, TEMPLATE);
         String templateContent;
 
